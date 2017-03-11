@@ -1,0 +1,16 @@
+//
+//  MovieWebServiceTests-Prefix.pch
+//  MovieWebService
+//
+//  Created by Sasha on 06/03/17.
+//  Copyright © 2017 Tan, Michael (Agoda). All rights reserved.
+//
+
+#ifndef MovieWebServiceTests_Prefix_pch
+#define MovieWebServiceTests_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import <UIKit/UIApplication.h>
+
+#endif /* MovieWebServiceTests_Prefix_pch */

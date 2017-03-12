@@ -11,7 +11,6 @@
 
 - (void)registerForNotificationsFromOtherInteractors:(NSString *)notificationName selector:(NSString *)selector
 {
-//    NSString *string = @"receiveTestNotification";
     [[NSNotificationCenter defaultCenter] addObserver:self
                                          selector:(NSSelectorFromString(selector))
                                              name:notificationName

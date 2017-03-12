@@ -17,16 +17,19 @@
 
 @implementation ListInteractor
 
+//Presenter asks Interactor to find films that will be displayed. These items are picked from the displayListSource
 - (void) findFilms
 {
     [self showfilmDisplayObjects:self.displayListSource];
 }
 
+//Send display object to the presenter via the ListInteractorOutput Protocol
 - (void) showfilmDisplayObjects:(NSArray *)filmDisplayArray
 {
     [self.presenter foundFilms:filmDisplayArray];
 }
 
+//Presenter asks Interactor to find the details for film which was tapped in the tableView
 - (void) findDetailsForFilm:(id)film
 {
     id foundFilm;
@@ -37,6 +40,7 @@
             break;
         }
     }
+    //Notification is fired for all listeners to tell them that the film is found. Whichever class needs this object can register to this notification
     [[NSNotificationCenter defaultCenter]
      postNotificationName:kReceiveObjectNotification
      object:foundFilm];

@@ -55,7 +55,7 @@ static NSString *NibName = @"MovieCell";
 
 - (void)configureView
 {
-    //Add Navigation title if required
+    //Add Navigation title if required, Did it on the storyboard
 }
 
 

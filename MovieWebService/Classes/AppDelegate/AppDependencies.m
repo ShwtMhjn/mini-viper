@@ -28,6 +28,16 @@
 
 @implementation AppDependencies
 
+- (void) setListWireframe:(ListWireframe *)listWireframe
+{
+    self.listWireframe = listWireframe;
+}
+
+- (void) setDetailsInteractor:(DetailsInteractor *)detailsInteractor
+{
+    self.detailsInteractor = detailsInteractor;
+}
+
 - (id)init
 {
     if ((self = [super init]))
@@ -70,7 +80,7 @@
     listWireframe.rootWireframe = rootWireframe;
     self.listWireframe = listWireframe;
 
-
+    //Detail Module properties
     detailsInteractor.presenter = detailsPresenter;
     [detailsInteractor registerForNotificationsFromOtherInteractors:kReceiveObjectNotification selector:kPerformReceiveObjectSelector];
     self.detailsInteractor = detailsInteractor;
@@ -82,10 +92,6 @@
     detailsWireFrame.detailPresenter = detailsPresenter;
     detailsWireFrame.listWireframe = listWireframe;
     detailsWireFrame.rootWireframe = rootWireframe;
-    
-    //
-    //    addPresenter.addModuleDelegate = listPresenter;
-    //    
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -102,7 +108,9 @@
     }
 }
 
+//This should be called whenever the notifications are not required, but tin the scenario, there are just two views, the List view will always cause changes in the data that need to show up on the Detail view. SO this is not being called anywhere
 - (void) removeObserver{
     [self removeObserver:self forKeyPath:@"self.detailsInteractor.displaySource"];
+    [[NSNotificationCenter defaultCenter] removeObserver:self.detailsInteractor];
 }
 @end

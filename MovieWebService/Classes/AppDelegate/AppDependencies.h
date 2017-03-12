@@ -9,8 +9,8 @@
 
 @interface AppDependencies : NSObject
 
-- (void)installRootViewControllerIntoWindow:(UIWindow *)window;
-- (void)configureDependencies;
+- (void) installRootViewControllerIntoWindow:(UIWindow *)window;
+- (void) configureDependencies;
 - (void) removeObserver;
 
 @end

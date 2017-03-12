@@ -2,8 +2,7 @@
 //  DetailsWireframe.m
 //  MovieWebService
 //
-//  Created by Sasha on 04/03/17.
-//  Copyright © 2017 Tan, Michael (Agoda). All rights reserved.
+//  Created by Sasha on 08/03/17.
 //
 
 #import "DetailsWireframe.h"

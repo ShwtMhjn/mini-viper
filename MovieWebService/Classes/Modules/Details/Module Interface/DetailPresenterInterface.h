@@ -3,7 +3,6 @@
 //  MovieWebService
 //
 //  Created by Sasha on 09/03/17.
-//  Copyright © 2017 Tan, Michael (Agoda). All rights reserved.
 //
 
 #ifndef DetailPresenterInterface_h

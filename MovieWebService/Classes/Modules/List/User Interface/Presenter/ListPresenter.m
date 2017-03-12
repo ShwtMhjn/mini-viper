@@ -2,8 +2,7 @@
 //  ListPresenter.m
 //  MovieWebService
 //
-//  Created by Sasha on 04/03/17.
-//  Copyright © 2017 Tan, Michael (Agoda). All rights reserved.
+//  Created by Sasha on 08/03/17.
 //
 
 #import "ListPresenter.h"
@@ -47,9 +46,9 @@
         NSString *name = (NSString *) [film valueForKey:kName];
         NSString *releaseDate = (NSString *) [self releaseDate:[film valueForKey:kReleaseDate]];
         
-        NSArray *filmRatingEanum = kFilmRatingEnum;
+        NSArray *filmRatingEnum = kFilmRatingEnum;
         int filmRatingIndex = [[film valueForKey:kFilmRating] intValue];
-        NSString *filmRating = filmRatingEanum[filmRatingIndex];
+        NSString *filmRating = filmRatingEnum[filmRatingIndex];
         
         NSString *rating = [NSString stringWithFormat:@"%@", [film valueForKey:kRating]];
         //@[kName, kFilmRating, kRating, kReleaseDate]

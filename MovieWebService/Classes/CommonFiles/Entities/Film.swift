@@ -2,8 +2,7 @@
 //  Film.swift
 //  MovieWebService
 //
-//  Created by Sasha on 03/03/17.
-//  Copyright © 2017 Tan, Michael (Agoda). All rights reserved.
+//  Created by Sasha on 07/03/17.
 //
 
 import Foundation

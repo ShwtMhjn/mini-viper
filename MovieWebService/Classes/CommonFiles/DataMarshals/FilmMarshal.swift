@@ -2,14 +2,12 @@
 //  FilmMarshal.swift
 //  MovieWebService
 //
-//  Created by Sasha on 03/03/17.
-//  Copyright © 2017 Tan, Michael (Agoda). All rights reserved.
+//  Created by Sasha on 07/03/17.
 //
 
 import Foundation
 
 class FilmMarshal : NSObject {
-//    var film : Film? 
     
     open func marshalFilmData(data: [String : AnyObject]) -> Film? {
         let name : String? = data.stringForKey(Constants.kName)
@@ -28,27 +26,34 @@ class FilmMarshal : NSObject {
         let directorMarshal : DirectorMarshal = DirectorMarshal.init(data: data!)
         return directorMarshal.getDirector()
     }
-
+    
     func actorsFromData(data:[AnyObject]?) -> [Actor]? {
         var actors : [Actor]? = [Actor]()
         for actorData in data! {
             let actorMarshal : ActorMarshal = ActorMarshal.init(data: actorData as! [String : AnyObject])
             let actor = actorMarshal.getActor()
-                if let _actor = actor {
-                    actors?.append(_actor)
-                }
+            if let _actor = actor {
+                actors?.append(_actor)
+            }
         }
         return actors
     }
+    
     func getFilmArray(data: [String : AnyObject]) -> [Film]? {
         var films : [Film]? = [Film]()
-        if let _data = data.arrayForKey("films") {
+        if let _data = data.arrayForKey("films") { //There is an array of films
             for film in _data {
                 if let _film = film as? [String : AnyObject] {
                     if let marshalledFilm = marshalFilmData(data: _film) {
                         films?.append(marshalledFilm)
                     }
                 }
+            }
+        }
+        else {
+            let _film = data as [String : AnyObject] //There is just one film
+            if let marshalledFilm = marshalFilmData(data: _film) {
+                films?.append(marshalledFilm)
             }
         }
         return films

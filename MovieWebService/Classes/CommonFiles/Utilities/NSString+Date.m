@@ -2,8 +2,7 @@
 //  NSString+Date.m
 //  MovieWebService
 //
-//  Created by Sasha on 06/03/17.
-//  Copyright © 2017 Tan, Michael (Agoda). All rights reserved.
+//  Created by Sasha on 09/03/17.
 //
 
 #import "NSString+Date.h"

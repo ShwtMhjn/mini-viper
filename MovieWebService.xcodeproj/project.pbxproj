@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D943A8861E69211E002012CD /* MovieData.json in Resources */ = {isa = PBXBuildFile; fileRef = D943A8851E69211E002012CD /* MovieData.json */; };
 		D943A8AA1E697B6D002012CD /* EntityTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D943A8A91E697B6D002012CD /* EntityTestCases.swift */; };
 		D943A8BA1E6A75B8002012CD /* BusinessTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D943A8B91E6A75B8002012CD /* BusinessTestCases.swift */; };
 		D943A8CF1E6A9853002012CD /* Read Me in Resources */ = {isa = PBXBuildFile; fileRef = D943A8CE1E6A9853002012CD /* Read Me */; };
@@ -64,6 +63,8 @@
 		D9799BC61E6DAA420083F6A7 /* NSString+Date.m in Sources */ = {isa = PBXBuildFile; fileRef = D9799BC41E6DAA420083F6A7 /* NSString+Date.m */; };
 		D9799BD11E6DBEC60083F6A7 /* ListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9799BCF1E6DBEC60083F6A7 /* ListPresenterTest.swift */; };
 		D9F651C11E741F4700A8F4F5 /* LaunchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9F651C01E741F4700A8F4F5 /* LaunchView.xib */; };
+		D9F651C81E751B2B00A8F4F5 /* MovieDataArray.json in Resources */ = {isa = PBXBuildFile; fileRef = D9F651C61E751B2B00A8F4F5 /* MovieDataArray.json */; };
+		D9F651C91E751B2B00A8F4F5 /* MovieDataSingle.json in Resources */ = {isa = PBXBuildFile; fileRef = D9F651C71E751B2B00A8F4F5 /* MovieDataSingle.json */; };
 		E899009C18CD78E500004F3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E899009B18CD78E500004F3F /* Foundation.framework */; };
 		E899009E18CD78E500004F3F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E899009D18CD78E500004F3F /* CoreGraphics.framework */; };
 		E89900A018CD78E500004F3F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E899009F18CD78E500004F3F /* UIKit.framework */; };
@@ -88,7 +89,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D943A8851E69211E002012CD /* MovieData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MovieData.json; path = Resources/MovieData.json; sourceTree = "<group>"; };
 		D943A88D1E694433002012CD /* MovieWebService-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MovieWebService-Bridging-Header.h"; sourceTree = "<group>"; };
 		D943A8A81E697B6D002012CD /* MovieWebServiceTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MovieWebServiceTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		D943A8A91E697B6D002012CD /* EntityTestCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntityTestCases.swift; path = EntityTests/EntityTestCases.swift; sourceTree = "<group>"; };
@@ -148,6 +148,8 @@
 		D98975621E71514E00DB91AF /* DetailPresenterInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DetailPresenterInterface.h; path = "Classes/Modules/Details/Module Interface/DetailPresenterInterface.h"; sourceTree = "<group>"; };
 		D98975631E7151C700DB91AF /* DetailsViewInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DetailsViewInterface.h; path = "Classes/Modules/Details/User Interface/View/DetailsViewInterface.h"; sourceTree = "<group>"; };
 		D9F651C01E741F4700A8F4F5 /* LaunchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchView.xib; path = Classes/CommonFiles/View/LaunchView.xib; sourceTree = "<group>"; };
+		D9F651C61E751B2B00A8F4F5 /* MovieDataArray.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MovieDataArray.json; path = Resources/MovieDataArray.json; sourceTree = "<group>"; };
+		D9F651C71E751B2B00A8F4F5 /* MovieDataSingle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MovieDataSingle.json; path = Resources/MovieDataSingle.json; sourceTree = "<group>"; };
 		E899009818CD78E500004F3F /* MovieWebService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieWebService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E899009B18CD78E500004F3F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E899009D18CD78E500004F3F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -191,8 +193,9 @@
 		D943A8841E692100002012CD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D9F651C61E751B2B00A8F4F5 /* MovieDataArray.json */,
+				D9F651C71E751B2B00A8F4F5 /* MovieDataSingle.json */,
 				E89900B318CD78E500004F3F /* Images.xcassets */,
-				D943A8851E69211E002012CD /* MovieData.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -668,14 +671,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9F651C91E751B2B00A8F4F5 /* MovieDataSingle.json in Resources */,
 				D943A9811E6D2C7C002012CD /* Main.storyboard in Resources */,
 				E89900B418CD78E500004F3F /* Images.xcassets in Resources */,
 				E89900A618CD78E500004F3F /* InfoPlist.strings in Resources */,
 				D943A9401E6AA0B8002012CD /* DetailViewController.xib in Resources */,
+				D9F651C81E751B2B00A8F4F5 /* MovieDataArray.json in Resources */,
 				D943A8CF1E6A9853002012CD /* Read Me in Resources */,
 				D9F651C11E741F4700A8F4F5 /* LaunchView.xib in Resources */,
 				D943A9631E6AA268002012CD /* MovieCell.xib in Resources */,
-				D943A8861E69211E002012CD /* MovieData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,15 +1,14 @@
-//
-//  BaseBusiness.swift
-//  MovieWebService
-//
-//  Created by Sasha on 04/03/17.
-//  Copyright © 2017 Tan, Michael (Agoda). All rights reserved.
-//
-
-import UIKit
-
-class BaseBusiness: NSObject {
-
+ //
+ //  BaseBusiness.swift
+ //  MovieWebService
+ //
+ //  Created by Sasha on 08/03/17.
+ //
+ 
+ import UIKit
+ 
+ class BaseBusiness: NSObject {
+    
     open func fetchJSONFromFile(fileName: String)->(result:[String : AnyObject]? , error:NSError?) {
         if let path = Bundle.main.path(forResource: fileName, ofType: "json") {
             do {
@@ -46,4 +45,4 @@ class BaseBusiness: NSObject {
         let error : NSError = NSError(domain: Constants.kErrorDomainJSONSerializationFailure, code: 4444, userInfo: userInfo)
         return error
     }
-}
+ }

@@ -2,8 +2,7 @@
 //  BusinessTestCases.swift
 //  MovieWebService
 //
-//  Created by Sasha on 04/03/17.
-//  Copyright © 2017 Tan, Michael (Agoda). All rights reserved.
+//  Created by Sasha on 08/03/17.
 //
 
 import XCTest
@@ -26,14 +25,14 @@ class BusinessTestCases: XCTestCase {
     }
     
     func fetchJSONFromFile() {
-        if let path = Bundle.main.path(forResource: "MovieData", ofType: "json") {
+        if let path = Bundle.main.path(forResource: "MovieDataSingle", ofType: "json") {
             do {
                 let jsonData = try NSData(contentsOfFile: path, options: NSData.ReadingOptions.mappedIfSafe)
                 do {
                     /*let jsonResult: [AnyObject]? = try JSONSerialization.jsonObject(with: jsonData as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as? [AnyObject]
-                    if let _jsonResult = jsonResult {
-                        jsonObject = _jsonResult
-                    }*/
+                     if let _jsonResult = jsonResult {
+                     jsonObject = _jsonResult
+                     }*/
                     jsonObject = try JSONSerialization.jsonObject(with: jsonData as Data, options: JSONSerialization.ReadingOptions.mutableContainers) //as? [AnyObject]
                 } catch {}
             } catch {}
@@ -41,17 +40,15 @@ class BusinessTestCases: XCTestCase {
     }
     
     func testFetchJson() {
-        let jsonData : [String : AnyObject]? = baseBusiness?.fetchJSONFromFile(fileName: "MovieData").result
-//        var isEqual : Bool = false
-//        let isEqual : Bool = false
-//        if let _jsonData = jsonData {
-//        if let _ = jsonData {
-//            isEqual = (NSDictionary(dictionary: _jsonData).isEqual(to: jsonObject!)) ? true : false
-//        }
-//        XCTAssertTrue(isEqual, "JSON files do not match")
+        let jsonData : [String : AnyObject]? = baseBusiness?.fetchJSONFromFile(fileName: "MovieDataSingle").result
         XCTAssertNotNil(jsonData, "JSON files not parsed")
     }
-    
+
+    func testFetchArrayJson() {
+        let jsonData : [String : AnyObject]? = baseBusiness?.fetchJSONFromFile(fileName: "MovieDataArray").result
+        XCTAssertNotNil(jsonData, "JSON files not parsed")
+    }
+
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

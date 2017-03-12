@@ -2,15 +2,14 @@
 //  FilmStore.swift
 //  MovieWebService
 //
-//  Created by Sasha on 04/03/17.
-//  Copyright © 2017 Tan, Michael (Agoda). All rights reserved.
+//  Created by Sasha on 08/03/17.
 //
 
 import Foundation
 
 class FilmStore : NSObject {
     static fileprivate var filmStore : FilmStore?
-
+    
     var films : [Film]? = nil
     
     open class func sharedInstance () -> FilmStore {
@@ -24,7 +23,7 @@ class FilmStore : NSObject {
     }
     
     func findAndStoreFilms()->[Film]? {
-        let data = BaseBusiness().fetchJSONFromFile(fileName: "MovieData")
+        let data = BaseBusiness().fetchJSONFromFile(fileName: "MovieDataSingle")
         if let _data = data.result {
             films = FilmMarshal().getFilmArray(data: _data)
         }

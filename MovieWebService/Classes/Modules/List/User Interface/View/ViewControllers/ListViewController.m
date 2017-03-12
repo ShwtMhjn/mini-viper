@@ -109,10 +109,10 @@ static NSString *NibName = @"MovieCell";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     [self.eventHandler filmTapped:[list objectAtIndex:indexPath.row]];
-//    DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
-//    NSDictionary *film = [list objectAtIndex:indexPath.row];
-//    [detailViewController setData:[film valueForKey:@"director"]];
-//    [self.navigationController pushViewController:detailViewController animated:YES];
+    //    DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+    //    NSDictionary *film = [list objectAtIndex:indexPath.row];
+    //    [detailViewController setData:[film valueForKey:@"director"]];
+    //    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 

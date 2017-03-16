@@ -7,7 +7,6 @@
 
 #import <Foundation/Foundation.h>
 #import "ListInteractorIO.h"
-//@class ListDataManager;
 
 @interface ListInteractor : NSObject <ListInteractorInput>
 

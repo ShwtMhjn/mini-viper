@@ -28,16 +28,6 @@
 
 @implementation AppDependencies
 
-- (void) setListWireframe:(ListWireframe *)listWireframe
-{
-    self.listWireframe = listWireframe;
-}
-
-- (void) setDetailsInteractor:(DetailsInteractor *)detailsInteractor
-{
-    self.detailsInteractor = detailsInteractor;
-}
-
 - (id)init
 {
     if ((self = [super init]))
